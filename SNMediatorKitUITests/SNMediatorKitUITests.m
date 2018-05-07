@@ -1,6 +1,6 @@
 //
-//  SNMediatorUITests.m
-//  SNMediatorUITests
+//  SNMediatorKitUITests.m
+//  SNMediatorKitUITests
 //
 //  Created by sunDong on 2018/5/7.
 //  Copyright © 2018年 snloveydus. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface SNMediatorUITests : XCTestCase
+@interface SNMediatorKitUITests : XCTestCase
 
 @end
 
-@implementation SNMediatorUITests
+@implementation SNMediatorKitUITests
 
 - (void)setUp {
     [super setUp];

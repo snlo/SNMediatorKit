@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07F8242ADB115C43C8DBE5D5 /* libPods-SNMediatorKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B193471B554015A36F5AE9C9 /* libPods-SNMediatorKitTests.a */; };
+		446EB5FD7F26E485CC172953 /* libPods-SNMediatorKitUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD2ABABA869386A0AA776506 /* libPods-SNMediatorKitUITests.a */; };
+		5EB002FD20A0A21E003E8AF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB002FC20A0A21E003E8AF8 /* AppDelegate.m */; };
+		5EB0030320A0A21E003E8AF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB0030120A0A21E003E8AF8 /* Main.storyboard */; };
+		5EB0030520A0A21F003E8AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB0030420A0A21F003E8AF8 /* Assets.xcassets */; };
+		5EB0030820A0A21F003E8AF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB0030620A0A21F003E8AF8 /* LaunchScreen.storyboard */; };
+		5EB0030B20A0A21F003E8AF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0030A20A0A21F003E8AF8 /* main.m */; };
+		5EB0031520A0A21F003E8AF8 /* SNMediatorKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0031420A0A21F003E8AF8 /* SNMediatorKitTests.m */; };
+		5EB0032020A0A21F003E8AF8 /* SNMediatorKitUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0031F20A0A21F003E8AF8 /* SNMediatorKitUITests.m */; };
+		5EB0033420A0A23F003E8AF8 /* SNMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0032F20A0A23F003E8AF8 /* SNMediator.m */; };
+		5EB0033520A0A23F003E8AF8 /* SNMediatorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033120A0A23F003E8AF8 /* SNMediatorTool.m */; };
+		5EB0033A20A0A25A003E8AF8 /* Target_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033720A0A25A003E8AF8 /* Target_Test.m */; };
+		5EB0033B20A0A25A003E8AF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033820A0A25A003E8AF8 /* ViewController.m */; };
+		7BF977B6F2E11539A363A512 /* libPods-SNMediatorKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A6AFDF9E11A1258753BA5D /* libPods-SNMediatorKit.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5EB0031120A0A21F003E8AF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EB002F020A0A21E003E8AF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EB002F720A0A21E003E8AF8;
+			remoteInfo = SNMediatorKit;
+		};
+		5EB0031C20A0A21F003E8AF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5EB002F020A0A21E003E8AF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5EB002F720A0A21E003E8AF8;
+			remoteInfo = SNMediatorKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06B1AFFC34F934847BE984DA /* Pods-SNMediatorKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit.debug.xcconfig"; sourceTree = "<group>"; };
+		0F142DFDD3FCE014AFA6AE50 /* Pods-SNMediatorKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitTests/Pods-SNMediatorKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5188FB078732C50919447FAF /* Pods-SNMediatorKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit.release.xcconfig"; sourceTree = "<group>"; };
+		5EB002F820A0A21E003E8AF8 /* SNMediatorKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNMediatorKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB002FB20A0A21E003E8AF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5EB002FC20A0A21E003E8AF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5EB0030220A0A21E003E8AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EB0030420A0A21F003E8AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EB0030720A0A21F003E8AF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EB0030920A0A21F003E8AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB0030A20A0A21F003E8AF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5EB0031020A0A21F003E8AF8 /* SNMediatorKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMediatorKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB0031420A0A21F003E8AF8 /* SNMediatorKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMediatorKitTests.m; sourceTree = "<group>"; };
+		5EB0031620A0A21F003E8AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB0031B20A0A21F003E8AF8 /* SNMediatorKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMediatorKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EB0031F20A0A21F003E8AF8 /* SNMediatorKitUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMediatorKitUITests.m; sourceTree = "<group>"; };
+		5EB0032120A0A21F003E8AF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB0032E20A0A23F003E8AF8 /* SNMediatorTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMediatorTool.h; sourceTree = "<group>"; };
+		5EB0032F20A0A23F003E8AF8 /* SNMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNMediator.m; sourceTree = "<group>"; };
+		5EB0033020A0A23F003E8AF8 /* SNMediatorKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMediatorKit.h; sourceTree = "<group>"; };
+		5EB0033120A0A23F003E8AF8 /* SNMediatorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNMediatorTool.m; sourceTree = "<group>"; };
+		5EB0033220A0A23F003E8AF8 /* SNMediatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMediatorProtocol.h; sourceTree = "<group>"; };
+		5EB0033320A0A23F003E8AF8 /* SNMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMediator.h; sourceTree = "<group>"; };
+		5EB0033620A0A25A003E8AF8 /* Target_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target_Test.h; sourceTree = "<group>"; };
+		5EB0033720A0A25A003E8AF8 /* Target_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target_Test.m; sourceTree = "<group>"; };
+		5EB0033820A0A25A003E8AF8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5EB0033920A0A25A003E8AF8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5EB0033C20A0A280003E8AF8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		79188610F5D144F32D7139EF /* Pods-SNMediatorKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitUITests/Pods-SNMediatorKitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B193471B554015A36F5AE9C9 /* libPods-SNMediatorKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B525997ABCB31843FFBBC954 /* Pods-SNMediatorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitTests/Pods-SNMediatorKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3A6AFDF9E11A1258753BA5D /* libPods-SNMediatorKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0CB6F140355A3B1D98BC89 /* Pods-SNMediatorKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitUITests/Pods-SNMediatorKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD2ABABA869386A0AA776506 /* libPods-SNMediatorKitUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKitUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EB002F520A0A21E003E8AF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF977B6F2E11539A363A512 /* libPods-SNMediatorKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0030D20A0A21F003E8AF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07F8242ADB115C43C8DBE5D5 /* libPods-SNMediatorKitTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0031820A0A21F003E8AF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				446EB5FD7F26E485CC172953 /* libPods-SNMediatorKitUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		137C6EDBE5E4585F67AE6EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3A6AFDF9E11A1258753BA5D /* libPods-SNMediatorKit.a */,
+				B193471B554015A36F5AE9C9 /* libPods-SNMediatorKitTests.a */,
+				FD2ABABA869386A0AA776506 /* libPods-SNMediatorKitUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5EB002EF20A0A21E003E8AF8 = {
+			isa = PBXGroup;
+			children = (
+				5EB002FA20A0A21E003E8AF8 /* SNMediatorKit */,
+				5EB0031320A0A21F003E8AF8 /* SNMediatorKitTests */,
+				5EB0031E20A0A21F003E8AF8 /* SNMediatorKitUITests */,
+				5EB002F920A0A21E003E8AF8 /* Products */,
+				A755BC3ADB7C1E29AE3756CC /* Pods */,
+				137C6EDBE5E4585F67AE6EA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5EB002F920A0A21E003E8AF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EB002F820A0A21E003E8AF8 /* SNMediatorKit.app */,
+				5EB0031020A0A21F003E8AF8 /* SNMediatorKitTests.xctest */,
+				5EB0031B20A0A21F003E8AF8 /* SNMediatorKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EB002FA20A0A21E003E8AF8 /* SNMediatorKit */ = {
+			isa = PBXGroup;
+			children = (
+				5EB002FB20A0A21E003E8AF8 /* AppDelegate.h */,
+				5EB002FC20A0A21E003E8AF8 /* AppDelegate.m */,
+				5EB0033620A0A25A003E8AF8 /* Target_Test.h */,
+				5EB0033720A0A25A003E8AF8 /* Target_Test.m */,
+				5EB0033920A0A25A003E8AF8 /* ViewController.h */,
+				5EB0033820A0A25A003E8AF8 /* ViewController.m */,
+				5EB0032D20A0A23F003E8AF8 /* SNMediatorKit */,
+				5EB0030120A0A21E003E8AF8 /* Main.storyboard */,
+				5EB0030420A0A21F003E8AF8 /* Assets.xcassets */,
+				5EB0030620A0A21F003E8AF8 /* LaunchScreen.storyboard */,
+				5EB0030920A0A21F003E8AF8 /* Info.plist */,
+				5EB0030A20A0A21F003E8AF8 /* main.m */,
+				5EB0033C20A0A280003E8AF8 /* PrefixHeader.pch */,
+			);
+			path = SNMediatorKit;
+			sourceTree = "<group>";
+		};
+		5EB0031320A0A21F003E8AF8 /* SNMediatorKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5EB0031420A0A21F003E8AF8 /* SNMediatorKitTests.m */,
+				5EB0031620A0A21F003E8AF8 /* Info.plist */,
+			);
+			path = SNMediatorKitTests;
+			sourceTree = "<group>";
+		};
+		5EB0031E20A0A21F003E8AF8 /* SNMediatorKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5EB0031F20A0A21F003E8AF8 /* SNMediatorKitUITests.m */,
+				5EB0032120A0A21F003E8AF8 /* Info.plist */,
+			);
+			path = SNMediatorKitUITests;
+			sourceTree = "<group>";
+		};
+		5EB0032D20A0A23F003E8AF8 /* SNMediatorKit */ = {
+			isa = PBXGroup;
+			children = (
+				5EB0032E20A0A23F003E8AF8 /* SNMediatorTool.h */,
+				5EB0032F20A0A23F003E8AF8 /* SNMediator.m */,
+				5EB0033020A0A23F003E8AF8 /* SNMediatorKit.h */,
+				5EB0033120A0A23F003E8AF8 /* SNMediatorTool.m */,
+				5EB0033220A0A23F003E8AF8 /* SNMediatorProtocol.h */,
+				5EB0033320A0A23F003E8AF8 /* SNMediator.h */,
+			);
+			path = SNMediatorKit;
+			sourceTree = "<group>";
+		};
+		A755BC3ADB7C1E29AE3756CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06B1AFFC34F934847BE984DA /* Pods-SNMediatorKit.debug.xcconfig */,
+				5188FB078732C50919447FAF /* Pods-SNMediatorKit.release.xcconfig */,
+				0F142DFDD3FCE014AFA6AE50 /* Pods-SNMediatorKitTests.debug.xcconfig */,
+				B525997ABCB31843FFBBC954 /* Pods-SNMediatorKitTests.release.xcconfig */,
+				CC0CB6F140355A3B1D98BC89 /* Pods-SNMediatorKitUITests.debug.xcconfig */,
+				79188610F5D144F32D7139EF /* Pods-SNMediatorKitUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EB002F720A0A21E003E8AF8 /* SNMediatorKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EB0032420A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKit" */;
+			buildPhases = (
+				8C9C2F8D2FF53A5B7C874AEF /* [CP] Check Pods Manifest.lock */,
+				5EB002F420A0A21E003E8AF8 /* Sources */,
+				5EB002F520A0A21E003E8AF8 /* Frameworks */,
+				5EB002F620A0A21E003E8AF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNMediatorKit;
+			productName = SNMediatorKit;
+			productReference = 5EB002F820A0A21E003E8AF8 /* SNMediatorKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5EB0030F20A0A21F003E8AF8 /* SNMediatorKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EB0032720A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKitTests" */;
+			buildPhases = (
+				814A3E0211AD9F87F7CA58CC /* [CP] Check Pods Manifest.lock */,
+				5EB0030C20A0A21F003E8AF8 /* Sources */,
+				5EB0030D20A0A21F003E8AF8 /* Frameworks */,
+				5EB0030E20A0A21F003E8AF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EB0031220A0A21F003E8AF8 /* PBXTargetDependency */,
+			);
+			name = SNMediatorKitTests;
+			productName = SNMediatorKitTests;
+			productReference = 5EB0031020A0A21F003E8AF8 /* SNMediatorKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5EB0031A20A0A21F003E8AF8 /* SNMediatorKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EB0032A20A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKitUITests" */;
+			buildPhases = (
+				D15C948688C479D796339E6B /* [CP] Check Pods Manifest.lock */,
+				5EB0031720A0A21F003E8AF8 /* Sources */,
+				5EB0031820A0A21F003E8AF8 /* Frameworks */,
+				5EB0031920A0A21F003E8AF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5EB0031D20A0A21F003E8AF8 /* PBXTargetDependency */,
+			);
+			name = SNMediatorKitUITests;
+			productName = SNMediatorKitUITests;
+			productReference = 5EB0031B20A0A21F003E8AF8 /* SNMediatorKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EB002F020A0A21E003E8AF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = snloveydus;
+				TargetAttributes = {
+					5EB002F720A0A21E003E8AF8 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					5EB0030F20A0A21F003E8AF8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5EB002F720A0A21E003E8AF8;
+					};
+					5EB0031A20A0A21F003E8AF8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5EB002F720A0A21E003E8AF8;
+					};
+				};
+			};
+			buildConfigurationList = 5EB002F320A0A21E003E8AF8 /* Build configuration list for PBXProject "SNMediatorKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EB002EF20A0A21E003E8AF8;
+			productRefGroup = 5EB002F920A0A21E003E8AF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EB002F720A0A21E003E8AF8 /* SNMediatorKit */,
+				5EB0030F20A0A21F003E8AF8 /* SNMediatorKitTests */,
+				5EB0031A20A0A21F003E8AF8 /* SNMediatorKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EB002F620A0A21E003E8AF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB0030820A0A21F003E8AF8 /* LaunchScreen.storyboard in Resources */,
+				5EB0030520A0A21F003E8AF8 /* Assets.xcassets in Resources */,
+				5EB0030320A0A21E003E8AF8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0030E20A0A21F003E8AF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0031920A0A21F003E8AF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		814A3E0211AD9F87F7CA58CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNMediatorKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C9C2F8D2FF53A5B7C874AEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNMediatorKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D15C948688C479D796339E6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SNMediatorKitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EB002F420A0A21E003E8AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB0033B20A0A25A003E8AF8 /* ViewController.m in Sources */,
+				5EB0033520A0A23F003E8AF8 /* SNMediatorTool.m in Sources */,
+				5EB0033A20A0A25A003E8AF8 /* Target_Test.m in Sources */,
+				5EB0033420A0A23F003E8AF8 /* SNMediator.m in Sources */,
+				5EB0030B20A0A21F003E8AF8 /* main.m in Sources */,
+				5EB002FD20A0A21E003E8AF8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0030C20A0A21F003E8AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB0031520A0A21F003E8AF8 /* SNMediatorKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EB0031720A0A21F003E8AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB0032020A0A21F003E8AF8 /* SNMediatorKitUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5EB0031220A0A21F003E8AF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EB002F720A0A21E003E8AF8 /* SNMediatorKit */;
+			targetProxy = 5EB0031120A0A21F003E8AF8 /* PBXContainerItemProxy */;
+		};
+		5EB0031D20A0A21F003E8AF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5EB002F720A0A21E003E8AF8 /* SNMediatorKit */;
+			targetProxy = 5EB0031C20A0A21F003E8AF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5EB0030120A0A21E003E8AF8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EB0030220A0A21E003E8AF8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EB0030620A0A21F003E8AF8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EB0030720A0A21F003E8AF8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EB0032220A0A21F003E8AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5EB0032320A0A21F003E8AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EB0032520A0A21F003E8AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B1AFFC34F934847BE984DA /* Pods-SNMediatorKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMediatorKit/PrefixHeader.pch";
+				INFOPLIST_FILE = SNMediatorKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5EB0032620A0A21F003E8AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5188FB078732C50919447FAF /* Pods-SNMediatorKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMediatorKit/PrefixHeader.pch";
+				INFOPLIST_FILE = SNMediatorKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5EB0032820A0A21F003E8AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F142DFDD3FCE014AFA6AE50 /* Pods-SNMediatorKitTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMediatorKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNMediatorKit.app/SNMediatorKit";
+			};
+			name = Debug;
+		};
+		5EB0032920A0A21F003E8AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B525997ABCB31843FFBBC954 /* Pods-SNMediatorKitTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMediatorKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SNMediatorKit.app/SNMediatorKit";
+			};
+			name = Release;
+		};
+		5EB0032B20A0A21F003E8AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC0CB6F140355A3B1D98BC89 /* Pods-SNMediatorKitUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMediatorKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNMediatorKit;
+			};
+			name = Debug;
+		};
+		5EB0032C20A0A21F003E8AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79188610F5D144F32D7139EF /* Pods-SNMediatorKitUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMediatorKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SNMediatorKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EB002F320A0A21E003E8AF8 /* Build configuration list for PBXProject "SNMediatorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB0032220A0A21F003E8AF8 /* Debug */,
+				5EB0032320A0A21F003E8AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EB0032420A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB0032520A0A21F003E8AF8 /* Debug */,
+				5EB0032620A0A21F003E8AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EB0032720A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB0032820A0A21F003E8AF8 /* Debug */,
+				5EB0032920A0A21F003E8AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EB0032A20A0A21F003E8AF8 /* Build configuration list for PBXNativeTarget "SNMediatorKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EB0032B20A0A21F003E8AF8 /* Debug */,
+				5EB0032C20A0A21F003E8AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EB002F020A0A21E003E8AF8 /* Project object */;
+}

@@ -14,31 +14,30 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1TS-rd-fTQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="dgB-it-IZg"/>
+                        <viewControllerLayoutGuide type="top" id="w3e-Kn-kDM"/>
+                        <viewControllerLayoutGuide type="bottom" id="1zA-fy-39c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzG-Tk-gP3">
-                                <rect key="frame" x="151" y="318" width="73" height="30"/>
-                                <state key="normal" title="TestAction"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-LG-SaE">
+                                <rect key="frame" x="148.5" y="318" width="79" height="30"/>
+                                <state key="normal" title="Test_Action"/>
                                 <connections>
-                                    <action selector="handleTestActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IdD-4g-apH"/>
+                                    <action selector="handleTestActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VR1-1g-RmC"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HzG-Tk-gP3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="05o-tm-36r"/>
-                            <constraint firstItem="HzG-Tk-gP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pdh-oY-EcP"/>
+                            <constraint firstItem="0Og-LG-SaE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZPr-IE-5RF"/>
+                            <constraint firstItem="0Og-LG-SaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUS-oG-hbG"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-105" y="102"/>
         </scene>
     </scenes>
 </document>

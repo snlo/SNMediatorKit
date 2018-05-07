@@ -217,7 +217,7 @@ static id instanse;
     return nil;
 }
 
-+ (id)mediatModule:(NSString *)module url:(NSURL *)url acrion:(NSString *)action params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget __attribute__((warn_unused_result)) {
++ (id)mediateModule:(NSString *)module url:(NSURL *)url acrion:(NSString *)action params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget __attribute__((warn_unused_result)) {
 	
 	id response = nil;
 	
@@ -242,7 +242,7 @@ static id instanse;
 	return nil;
 }
 
-+ (id)mediatModule:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
++ (id)mediateModule:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
 	
 	id response = nil;
 	
