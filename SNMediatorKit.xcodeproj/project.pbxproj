@@ -178,12 +178,12 @@
 		5EB0032D20A0A23F003E8AF8 /* SNMediatorKit */ = {
 			isa = PBXGroup;
 			children = (
-				5EB0032E20A0A23F003E8AF8 /* SNMediatorTool.h */,
-				5EB0032F20A0A23F003E8AF8 /* SNMediator.m */,
 				5EB0033020A0A23F003E8AF8 /* SNMediatorKit.h */,
+				5EB0033320A0A23F003E8AF8 /* SNMediator.h */,
+				5EB0032F20A0A23F003E8AF8 /* SNMediator.m */,
+				5EB0032E20A0A23F003E8AF8 /* SNMediatorTool.h */,
 				5EB0033120A0A23F003E8AF8 /* SNMediatorTool.m */,
 				5EB0033220A0A23F003E8AF8 /* SNMediatorProtocol.h */,
-				5EB0033320A0A23F003E8AF8 /* SNMediator.h */,
 			);
 			path = SNMediatorKit;
 			sourceTree = "<group>";
