@@ -10,7 +10,7 @@
 
 @interface Target_Test : NSObject
 
-- (RACSubject *)Action_nativeTestSignal:(NSDictionary *)params;
+//- (RACSubject *)Action_nativeTestSignal:(NSDictionary *)params;
 
 - (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params;
 

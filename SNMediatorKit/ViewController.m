@@ -20,7 +20,7 @@
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 	
-    
+	
 	
 }
 
@@ -43,12 +43,12 @@
 //		NSLog(@" - - -- = - - - %@",x);
 //	}];
 	
-	RACSubject * sub = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
-
-	[sub subscribeNext:^(id  _Nullable x) {
-		NSLog(@" - -- - -- - --00 0 %@",x);
-	}];
-	[sub sendNext:@"ddddd"];
+//	RACSubject * sub = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
+//
+//	[sub subscribeNext:^(id  _Nullable x) {
+//		NSLog(@" - -- - -- - --00 0 %@",x);
+//	}];
+//	[sub sendNext:@"ddddd"];
 	
 	
 	

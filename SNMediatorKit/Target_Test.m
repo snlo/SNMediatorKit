@@ -10,39 +10,39 @@
 
 @implementation Target_Test
 
-- (RACSubject *)Action_nativeTestSignal:(NSDictionary *)params {
-	
-//	return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+//- (RACSubject *)Action_nativeTestSignal:(NSDictionary *)params {
+//	
+////	return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+////
+////		[subscriber sendNext:@"haha"];
+////		[subscriber sendCompleted];
+////
+////		return nil;
+////	}];
+//	
+////	RACCommand * com = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+////		return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+////			 [subscriber sendNext:@"ok"];
+////			 [subscriber sendCompleted];
+////			return nil;
+////		}];
+////	}];
+////
+////	return com;
+//	
+//	RACSubject * sub = [RACSubject subject];
 //
-//		[subscriber sendNext:@"haha"];
-//		[subscriber sendCompleted];
+////	[sub sendNext:@"hihi"];
+////	[sub sendCompleted];
 //
-//		return nil;
+//	[sub subscribeNext:^(id  _Nullable x) {
+//		NSLog(@"AAAAAAA---A-A--A-A-A-A--A%@",x);
 //	}];
-	
-//	RACCommand * com = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
-//		return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
-//			 [subscriber sendNext:@"ok"];
-//			 [subscriber sendCompleted];
-//			return nil;
-//		}];
-//	}];
+//	[sub sendNext:@"xxx"];
 //
-//	return com;
-	
-	RACSubject * sub = [RACSubject subject];
-
-//	[sub sendNext:@"hihi"];
-//	[sub sendCompleted];
-
-	[sub subscribeNext:^(id  _Nullable x) {
-		NSLog(@"AAAAAAA---A-A--A-A-A-A--A%@",x);
-	}];
-	[sub sendNext:@"xxx"];
-
-	return sub;
-	
-}
+//	return sub;
+//	
+//}
 
 - (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params {
 	UIViewController * vc = [[UIViewController alloc] init];
