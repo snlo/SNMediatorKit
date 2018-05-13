@@ -54,9 +54,9 @@ Pod::Spec.new do |s|
   #
 
   s.author             = { "snlo" => "snloveydus@sina.com" }
-  # Or just: s.author    = "MrSunDong"
-  # s.authors            = { "MrSunDong" => "snloveydus@sina.com" }
-  # s.social_media_url   = "http://twitter.com/MrSunDong"
+  # Or just: s.author    = "snlo"
+  # s.authors            = { "snlo" => "snloveydus@sina.com" }
+  # s.social_media_url   = "http://twitter.com/snlo"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -133,7 +133,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
-  s,dependency 'SNTool'
+  s.dependency 'SNTool'
 
 end
