@@ -2,8 +2,8 @@
 //  ViewController.m
 //  SNMediator
 //
-//  Created by sunDong on 2018/5/7.
-//  Copyright © 2018年 snloveydus. All rights reserved.
+//  Created by snlo on 2018/5/7.
+//  Copyright © 2018年 snlo. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-	
+//	pod trunk push SNMediatorKit.podspec --verbose --allow-warnings --use-libraries
 	
 	
 }

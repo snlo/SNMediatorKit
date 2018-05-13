@@ -2,7 +2,7 @@
 //  SNMediator.h
 //  AiteCube
 //
-//  Created by sunDong on 2017/9/22.
+//  Created by snlo on 2017/9/22.
 //  Copyright © 2017年 AiteCube. All rights reserved.
 //
 

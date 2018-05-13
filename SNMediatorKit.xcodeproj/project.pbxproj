@@ -20,6 +20,7 @@
 		5EB0033520A0A23F003E8AF8 /* SNMediatorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033120A0A23F003E8AF8 /* SNMediatorTool.m */; };
 		5EB0033A20A0A25A003E8AF8 /* Target_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033720A0A25A003E8AF8 /* Target_Test.m */; };
 		5EB0033B20A0A25A003E8AF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0033820A0A25A003E8AF8 /* ViewController.m */; };
+		5ED6AB4020A7E52B00128667 /* wwww.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED6AB3F20A7E52B00128667 /* wwww.m */; };
 		7BF977B6F2E11539A363A512 /* libPods-SNMediatorKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A6AFDF9E11A1258753BA5D /* libPods-SNMediatorKit.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		5EB0033820A0A25A003E8AF8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5EB0033920A0A25A003E8AF8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5EB0033C20A0A280003E8AF8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5ED6AB3E20A7E52B00128667 /* wwww.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wwww.h; sourceTree = "<group>"; };
+		5ED6AB3F20A7E52B00128667 /* wwww.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wwww.m; sourceTree = "<group>"; };
 		79188610F5D144F32D7139EF /* Pods-SNMediatorKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitUITests/Pods-SNMediatorKitUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B193471B554015A36F5AE9C9 /* libPods-SNMediatorKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B525997ABCB31843FFBBC954 /* Pods-SNMediatorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitTests/Pods-SNMediatorKitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				5EB0033720A0A25A003E8AF8 /* Target_Test.m */,
 				5EB0033920A0A25A003E8AF8 /* ViewController.h */,
 				5EB0033820A0A25A003E8AF8 /* ViewController.m */,
+				5ED6AB3E20A7E52B00128667 /* wwww.h */,
+				5ED6AB3F20A7E52B00128667 /* wwww.m */,
 				5EB0032D20A0A23F003E8AF8 /* SNMediatorKit */,
 				5EB0030120A0A21E003E8AF8 /* Main.storyboard */,
 				5EB0030420A0A21F003E8AF8 /* Assets.xcassets */,
@@ -268,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = snloveydus;
+				ORGANIZATIONNAME = snlo;
 				TargetAttributes = {
 					5EB002F720A0A21E003E8AF8 = {
 						CreatedOnToolsVersion = 9.3;
@@ -411,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EB0033B20A0A25A003E8AF8 /* ViewController.m in Sources */,
+				5ED6AB4020A7E52B00128667 /* wwww.m in Sources */,
 				5EB0033520A0A23F003E8AF8 /* SNMediatorTool.m in Sources */,
 				5EB0033A20A0A25A003E8AF8 /* Target_Test.m in Sources */,
 				5EB0033420A0A23F003E8AF8 /* SNMediator.m in Sources */,
@@ -589,7 +595,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMediatorKit/PrefixHeader.pch";
 				INFOPLIST_FILE = SNMediatorKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,7 +614,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SNMediatorKit/PrefixHeader.pch";
 				INFOPLIST_FILE = SNMediatorKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -619,7 +631,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNMediatorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -634,7 +650,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNMediatorKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -648,7 +668,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNMediatorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -662,7 +686,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SNMediatorKitUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = snlo.SNMediatorKitUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
