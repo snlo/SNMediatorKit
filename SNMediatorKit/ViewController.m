@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+#import "SNMediatorKit.h"
 
 @interface ViewController ()
 
@@ -30,7 +31,7 @@
 }
 - (IBAction)handleTestActionButton:(UIButton *)sender {
 	
-//	RACSignal * signal = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
+//    RACSignal * signal = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
 //
 //	[signal subscribeNext:^(id  _Nullable x) {
 //		NSLog(@"valuesodfji - --  -- - - -- - -- %@",x);
@@ -54,17 +55,17 @@
 	
 	
 	
-//	__block UIViewController * vc = [SNMediator mediateModule:@"Test" url:nil acrion:@"nativeTestViewController" params:nil shouldCacheTarget:NO];
-//
-//	[self presentViewController:vc animated:YES completion:^{
-//
-//		dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//			[vc dismissViewControllerAnimated:YES completion:^{
-//
-//			}];
-//		});
-//
-//	}];
+    __block UIViewController * vc = [SNMediator mediateModule:@"Test" url:nil action:@"nativeTestViewController" params:nil shouldCacheTarget:NO];
+
+    [self presentViewController:vc animated:YES completion:^{
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [vc dismissViewControllerAnimated:YES completion:^{
+
+            }];
+        });
+
+    }];
 	
 	NSLog(@"%@",[SNMediator class]);
 }
