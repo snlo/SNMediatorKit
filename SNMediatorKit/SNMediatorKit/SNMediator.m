@@ -209,7 +209,19 @@ singletonImplemention(SNMediator)
 		return response;
 	} else if ([response isKindOfClass:[NSMutableDictionary class]]) {
 		return response;
-	} else {
+    } else if ([response isKindOfClass:[NSArray class]]) {
+        return response;
+    } else if ([response isKindOfClass:[NSMutableArray class]]) {
+        return response;
+    } else if ([response isKindOfClass:[NSNumber class]]) {
+        return response;
+    } else if ([response isKindOfClass:[NSSet class]]) {
+        return response;
+    } else if ([response isKindOfClass:[NSMutableSet class]]) {
+        return response;
+    } else if ([response isKindOfClass:[NSString class]]) {
+        return response;
+    } else {
 		return [SNMediator mediatErrorViewController];
 	}
 	
