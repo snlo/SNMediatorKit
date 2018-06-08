@@ -1,4 +1,4 @@
-![WechatIMG218](/Users/snlo/Desktop/gitHub/SNMediatorKit/SNMediatorKit/Assets.xcassets/WechatIMG218.imageset/WechatIMG218.jpeg)
+![](https://github.com/snlo/SNMediatorKit/blob/master/SNMediatorKit/Assets.xcassets/WechatIMG218.imageset/WechatIMG218.jpeg)
 
 # SNMediatorKit
 
