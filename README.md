@@ -1,4 +1,7 @@
+![WechatIMG218](/Users/snlo/Desktop/gitHub/SNMediatorKit/SNMediatorKit/Assets.xcassets/WechatIMG218.imageset/WechatIMG218.jpeg)
+
 # SNMediatorKit
+
 模块化中间件，有助于本地模块间解耦甚至是相互独立。利用它可以实现模块间通信和调度，并且支持本地和远程，还提供通信和调度的本地缓存。
 
 ## 常用两个高阶API
