@@ -86,7 +86,7 @@
 __block UIViewController * vc = [SNMediator mediateModule:@"kTest" url:nil action:@"nativeTestViewController" params:nil shouldCacheTarget:NO];
 /*
 "kTest":为‘Target_’硬编码之后的Target名，通常被命名为模块名
-"nativeTestViewController":为Action名，其中‘native’为本地Action的硬编码标识
+"nativeTestViewController":为Action名，其中‘native’为本地Action的硬编码标识，SNMediatorKit的调度顺序：远程调度 —> 本地调度，所以在各模块中只有本地调度，若有远程调度的需求，也没关系，因为始终都会到达本地调度这一步。
 */
     [self presentViewController:vc animated:YES completion:^{
 
