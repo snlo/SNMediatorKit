@@ -15,9 +15,4 @@ __attribute__((objc_subclassing_restricted))
 
 singletonInterface(SNMediatorTool)
 
-@property (nonatomic, strong) UIColor * contentColor;
-
-@property (nonatomic, strong) UIColor * blackColor;
-
-
 @end

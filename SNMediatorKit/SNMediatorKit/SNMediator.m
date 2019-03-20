@@ -21,7 +21,7 @@ singletonImplemention(SNMediator)
 
 #pragma mark - public methods
 
-- (id)performActionWithUrl:(NSURL *)url completion:(void(^)(id responseObject))completion {
+- (id)performAction:(NSURL *)url completion:(void(^)(id responseObject))completion {
 	NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
 	NSString *urlString = [url query];
 	for (NSString *param in [urlString componentsSeparatedByString:@"&"]) {
@@ -38,7 +38,7 @@ singletonImplemention(SNMediator)
     /*
      路由逻辑:target-action
      */
-	id responseObject = [self performTarget:url.host action:actionName params:params shouldCacheTarget:NO];
+	id responseObject = [self performTarget:url.host action:actionName params:params cacheTarget:NO];
 	if (completion) {
 		if (responseObject) {
 			completion(responseObject);
@@ -49,7 +49,7 @@ singletonImplemention(SNMediator)
 	return responseObject;
 }
 
-- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
+- (id)performTarget:(NSString *)targetName action:(NSString *)actionName params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget {
 	NSString *targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
 	NSString *actionString = [NSString stringWithFormat:@"Action_%@:", actionName];
 	Class targetClass;
@@ -67,7 +67,7 @@ singletonImplemention(SNMediator)
 		return nil;
 	}
 	
-	if (shouldCacheTarget) {
+	if (cacheTarget) {
 		self.cachedTarget[targetClassString] = target;
 	}
 	
@@ -91,8 +91,8 @@ singletonImplemention(SNMediator)
 	}
 }
 
-- (void)releaseCachedTargetWithTargetName:(NSString *)targetName {
-	NSString *targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
+- (void)releaseCachedTarget:(NSString *)name {
+	NSString *targetClassString = [NSString stringWithFormat:@"Target_%@", name];
 	[self.cachedTarget removeObjectForKey:targetClassString];
 }
 
@@ -168,24 +168,24 @@ singletonImplemention(SNMediator)
 
 #pragma mark -- 扩展
 
-+ (id)module:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
++ (id)module:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget {
     
     if (url) {
-        return [[SNMediator sharedManager] performActionWithUrl:url completion:nil];
+        return [[SNMediator sharedManager] performAction:url completion:nil];
     } else {
-        return [[SNMediator sharedManager] performTarget:module action:action params:params shouldCacheTarget:shouldCacheTarget];
+        return [[SNMediator sharedManager] performTarget:module action:action params:params cacheTarget:cacheTarget];
     }
     return nil;
 }
 
-+ (id)mediateModule:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget __attribute__((warn_unused_result)) {
++ (id)sn_Module:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget __attribute__((warn_unused_result)) {
 	
 	id response = nil;
 	
 	if (url) {
-		response = [SNMediator module:nil url:url action:nil params:nil shouldCacheTarget:shouldCacheTarget];
+		response = [SNMediator module:nil url:url action:nil params:nil cacheTarget:cacheTarget];
 	} else {
-		response = [SNMediator module:module url:nil action:action params:params shouldCacheTarget:shouldCacheTarget];
+		response = [SNMediator module:module url:nil action:action params:params cacheTarget:cacheTarget];
 	}
 	
 	if ([response isKindOfClass:[UIViewController class]]) {
@@ -215,14 +215,14 @@ singletonImplemention(SNMediator)
 	return nil;
 }
 
-+ (id)mediateModule:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget {
++ (id)sn_Module:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget {
 	
 	id response = nil;
 	
 	if (url) {
-		response = [SNMediator module:nil url:url action:nil params:nil shouldCacheTarget:shouldCacheTarget];
+		response = [SNMediator module:nil url:url action:nil params:nil cacheTarget:cacheTarget];
 	} else {
-		response = [SNMediator module:module url:nil action:signal params:params shouldCacheTarget:shouldCacheTarget];
+		response = [SNMediator module:module url:nil action:signal params:params cacheTarget:cacheTarget];
 	}
 	if ([response isKindOfClass:NSClassFromString(@"RACCommand")]) {
 		return response;
@@ -238,15 +238,13 @@ singletonImplemention(SNMediator)
 }
 
 + (UIViewController *)mediatErrorViewController {
-	__block UIViewController * errorViewController = [UIViewController new];
-	errorViewController.view.backgroundColor = [UIColor whiteColor];
-	[[SNTool topViewController] presentViewController:errorViewController animated:YES completion:^{
-		[SNTool showAlertStyle:UIAlertControllerStyleAlert title:@"提示" msg:@"敬请期待相关功能，感谢您的支持" chooseBlock:^(NSInteger actionIndx) {
-			[errorViewController dismissViewControllerAnimated:YES completion:^{
-				
-			}];
-		} actionsStatement:@"确认", nil];
-	}];
+	__block UIViewController * errorViewController = [[UIViewController alloc] init];
+	errorViewController.view.backgroundColor = [UIColor redColor];
+    [SNTool showAlertStyle:UIAlertControllerStyleAlert title:@"提示" msg:@"相关功能敬请期待，感谢您的支持" chooseBlock:^(NSInteger actionIndx) {
+        [errorViewController dismissViewControllerAnimated:YES completion:^{
+
+        }];
+    } actionsStatement:@"确认", nil];
 	return errorViewController;
 }
 

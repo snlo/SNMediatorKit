@@ -17,10 +17,10 @@
  @param url 远程调度链接
  @param action 事件名
  @param params 附带参数
- @param shouldCacheTarget 是否缓存本地组件名
+ @param cacheTarget 是否缓存本地组件名
  @return 可能是'UIViewController'、‘UIView’、‘NSDictionary’、‘NSMutableDictionary’、‘NSArray’、‘NSMutableArray’、‘NSNumber’、‘NSSet’、‘NSMutableSet’、‘NSString’
  */
-+ (id)mediateModule:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget;
++ (id)sn_Module:(NSString *)module url:(NSURL *)url action:(NSString *)action params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget;
 
 /**
  调度辅助函数，会包含一些特殊处理
@@ -29,9 +29,9 @@
  @param url 远程调度链接
  @param signal signal:信号名
  @param params 附带参数
- @param shouldCacheTarget 是否缓存本地组件名
+ @param cacheTarget 是否缓存本地组件名
  @return 返回信号‘RACSignal’、‘RACCommand’、‘RACSubject’
  */
-+ (id)mediateModule:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params shouldCacheTarget:(BOOL)shouldCacheTarget __attribute__((warn_unused_result));
++ (id)sn_Module:(NSString *)module url:(NSURL *)url signal:(NSString *)signal params:(NSDictionary *)params cacheTarget:(BOOL)cacheTarget __attribute__((warn_unused_result));
 
 @end

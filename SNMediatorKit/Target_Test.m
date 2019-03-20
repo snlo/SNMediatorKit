@@ -46,7 +46,7 @@
 
 - (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params {
 	UIViewController * vc = [[UIViewController alloc] init];
-	vc.view.backgroundColor = [UIColor blackColor];
+	vc.view.backgroundColor = [UIColor redColor];
 	return vc;
 }
 

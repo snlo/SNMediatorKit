@@ -52,10 +52,10 @@
 	
 	
 	
+    
 	
 	
-	
-    __block UIViewController * vc = [SNMediator mediateModule:@"Test" url:nil action:@"nativeTestViewController" params:nil shouldCacheTarget:NO];
+    __block UIViewController * vc = [SNMediator sn_Module:@"Test" url:nil action:@"nativeTestViewControler" params:nil cacheTarget:NO];
 
     [self presentViewController:vc animated:YES completion:^{
 
