@@ -395,17 +395,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit-resources.sh",
-				"${PODS_ROOT}/SNTool/SNTool/SNTool/SNTool.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SNTool.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SNMediatorKit/Pods-SNMediatorKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
