@@ -21,21 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-LG-SaE">
-                                <rect key="frame" x="148" y="318.5" width="79" height="30"/>
-                                <state key="normal" title="Test_Action"/>
-                                <connections>
-                                    <action selector="handleTestActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VR1-1g-RmC"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QH4-fB-OS1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0Og-LG-SaE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZPr-IE-5RF"/>
-                            <constraint firstItem="0Og-LG-SaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUS-oG-hbG"/>
+                            <constraint firstItem="1zA-fy-39c" firstAttribute="top" secondItem="QH4-fB-OS1" secondAttribute="bottom" id="7eQ-ho-3Gd"/>
+                            <constraint firstItem="QH4-fB-OS1" firstAttribute="top" secondItem="w3e-Kn-kDM" secondAttribute="bottom" id="ggQ-qp-4VA"/>
+                            <constraint firstAttribute="trailing" secondItem="QH4-fB-OS1" secondAttribute="trailing" id="ksu-wc-QOx"/>
+                            <constraint firstItem="QH4-fB-OS1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="u0z-Rx-Csh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S9d-6t-OFq"/>
+                    <connections>
+                        <outlet property="tableView" destination="QH4-fB-OS1" id="p9M-qf-8lL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
