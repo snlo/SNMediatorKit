@@ -1,5 +1,5 @@
 //
-//  Target_Test.h
+//  Target_kTest.h
 //  SNMediator
 //
 //  Created by snlo on 2018/5/7.
@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Target_Test : NSObject
-
-//- (RACSubject *)Action_nativeTestSignal:(NSDictionary *)params;
+@interface Target_kTest : NSObject
 
 - (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params;
 

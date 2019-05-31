@@ -19,9 +19,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
 //	pod trunk push SNMediatorKit.podspec --verbose --allow-warnings --use-libraries
-	
-	
 }
 
 
@@ -30,30 +29,6 @@
 	// Dispose of any resources that can be recreated.
 }
 - (IBAction)handleTestActionButton:(UIButton *)sender {
-	
-//    RACSignal * signal = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
-//
-//	[signal subscribeNext:^(id  _Nullable x) {
-//		NSLog(@"valuesodfji - --  -- - - -- - -- %@",x);
-//	}];
-	
-//	RACCommand * com = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
-//
-//	[[com execute:nil] subscribeNext:^(id  _Nullable x) {
-//		NSLog(@" - - -- = - - - %@",x);
-//	}];
-	
-//	RACSubject * sub = [SNMediator mediateModule:@"Test" url:nil signal:@"nativeTestSignal" params:nil shouldCacheTarget:NO];
-//
-//	[sub subscribeNext:^(id  _Nullable x) {
-//		NSLog(@" - -- - -- - --00 0 %@",x);
-//	}];
-//	[sub sendNext:@"ddddd"];
-	
-	
-	
-    
-	
 	
     __block UIViewController * vc = [SNMediator sn_Module:@"Test" url:nil action:@"nativeTestViewControler" params:nil cacheTarget:NO];
 
