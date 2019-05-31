@@ -59,13 +59,20 @@ singletonImplemention(SNMediator)
 		targetClass = NSClassFromString(targetClassString);
 		target = [[targetClass alloc] init];
 	}
+    if (target == nil) {
+        NSString * swiftModuleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
+        
+        targetClassString = [NSString stringWithFormat:@"%@.Target_%@", swiftModuleName, targetName];
+        
+        targetClass = NSClassFromString(targetClassString);
+        target = [[targetClass alloc] init];
+    }
+    if (target == nil) {
+        //异常处理
+        return nil;
+    }
 	
 	SEL action = NSSelectorFromString(actionString);
-	
-	if (target == nil) {
-        //异常处理
-		return nil;
-	}
 	
 	if (cacheTarget) {
 		self.cachedTarget[targetClassString] = target;
@@ -84,6 +91,7 @@ singletonImplemention(SNMediator)
 			if ([target respondsToSelector:action]) {
 				return [self safePerformAction:action target:target params:params];
 			} else {
+                //异常处理
 				[self.cachedTarget removeObjectForKey:targetClassString];
 				return nil;
 			}
