@@ -7,3 +7,15 @@
 //
 
 import Foundation
+import UIKit
+
+class Target_kTestSwift: NSObject {
+    
+    @objc func Action_nativeFetchSwiftViewController(_ parmas:[AnyHashable:Any]?) -> UIViewController {
+        
+        return SwiftViewController.init()
+        
+    }
+}
+
+

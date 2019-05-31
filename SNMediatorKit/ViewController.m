@@ -19,10 +19,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-//	pod trunk push SNMediatorKit.podspec --verbose --allow-warnings --use-libraries
 }
-
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
@@ -30,7 +27,8 @@
 }
 - (IBAction)handleTestActionButton:(UIButton *)sender {
 	
-    __block UIViewController * vc = [SNMediator sn_Module:@"Test" url:nil action:@"nativeTestViewControler" params:nil cacheTarget:NO];
+    __block UIViewController * vc = [SNMediator sn_Module:@"kTest" url:nil action:@"nativeTestViewControler" params:nil cacheTarget:NO];
+    __block UIViewController * vc_swift = [SNMediator sn_Module:@"kTestSwift" url:nil action:@"nativeFetchSwiftViewController" params:@{} cacheTarget:NO];
 
     [self presentViewController:vc animated:YES completion:^{
 

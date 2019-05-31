@@ -24,6 +24,7 @@
 		989046BF22A0C3AE004FCCDB /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989046BD22A0C3AE004FCCDB /* SwiftViewController.swift */; };
 		989046C022A0C3AE004FCCDB /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 989046BE22A0C3AE004FCCDB /* SwiftViewController.xib */; };
 		989046C222A0C3F1004FCCDB /* Target_kTestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989046C122A0C3F1004FCCDB /* Target_kTestSwift.swift */; };
+		989046C422A0C63D004FCCDB /* SNMediator.md in Resources */ = {isa = PBXBuildFile; fileRef = 989046C322A0C63D004FCCDB /* SNMediator.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		989046BD22A0C3AE004FCCDB /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		989046BE22A0C3AE004FCCDB /* SwiftViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
 		989046C122A0C3F1004FCCDB /* Target_kTestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target_kTestSwift.swift; sourceTree = "<group>"; };
+		989046C322A0C63D004FCCDB /* SNMediator.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SNMediator.md; sourceTree = "<group>"; };
 		B193471B554015A36F5AE9C9 /* libPods-SNMediatorKitTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKitTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B525997ABCB31843FFBBC954 /* Pods-SNMediatorKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SNMediatorKitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SNMediatorKitTests/Pods-SNMediatorKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		C3A6AFDF9E11A1258753BA5D /* libPods-SNMediatorKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SNMediatorKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				5EB0030A20A0A21F003E8AF8 /* main.m */,
 				5EB0033C20A0A280003E8AF8 /* PrefixHeader.pch */,
 				989046BC22A0C3AD004FCCDB /* SNMediatorKit-Bridging-Header.h */,
+				989046C322A0C63D004FCCDB /* SNMediator.md */,
 			);
 			path = SNMediatorKit;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 				989046C022A0C3AE004FCCDB /* SwiftViewController.xib in Resources */,
 				5EB0030820A0A21F003E8AF8 /* LaunchScreen.storyboard in Resources */,
 				5EB0030520A0A21F003E8AF8 /* Assets.xcassets in Resources */,
+				989046C422A0C63D004FCCDB /* SNMediator.md in Resources */,
 				5EB0030320A0A21E003E8AF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
