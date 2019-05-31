@@ -16,4 +16,8 @@
 	return vc;
 }
 
+- (void)Action_nativeTest:(NSDictionary *)param {
+    NSLog(@"bala bala bala!");
+}
+
 @end

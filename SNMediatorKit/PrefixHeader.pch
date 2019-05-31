@@ -16,4 +16,8 @@
 
 #import "SNMediatorKit.h"
 
+#import "SNMediatorKit-Swift.h"
+
+
+
 #endif /* PrefixHeader_pch */

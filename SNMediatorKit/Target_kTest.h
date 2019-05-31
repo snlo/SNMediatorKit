@@ -12,4 +12,6 @@
 
 - (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params;
 
+- (void)Action_nativeTest:(NSDictionary *)param;
+
 @end

@@ -14,7 +14,10 @@ class Target_kTestSwift: NSObject {
     @objc func Action_nativeFetchSwiftViewController(_ parmas:[AnyHashable:Any]?) -> UIViewController {
         
         return SwiftViewController.init()
-        
+    }
+    
+    @objc func Action_nativeTest(_ param: [AnyHashable:Any]?) -> Void {
+        print("swift bala bala bala")
     }
 }
 

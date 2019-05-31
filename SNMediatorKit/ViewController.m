@@ -69,14 +69,15 @@
     switch (indexPath.row) {
         case 0: {
             viewController =
-            [SNMediator sn_Module:@"kTest" url:nil action:@"nativeTestViewController" params:@{} cacheTarget:NO];
+            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:nil target:@"kTest" cache:NO];
         } break;
         case 1: {
             viewController =
-            [SNMediator sn_Module:@"kTestSwift" url:nil action:@"nativeFetchSwiftViewController" params:@{} cacheTarget:NO];
+            [SNMediator sn_mediatorForAction:@"nativeFetchSwiftViewController" param:nil target:@"kTestSwift" cache:NO];
         } break;
         default: break;
     }
+
     [self.navigationController pushViewController:viewController animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
