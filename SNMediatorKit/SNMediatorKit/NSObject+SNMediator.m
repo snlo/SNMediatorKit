@@ -21,6 +21,11 @@
     return [SNMediator.shared sn_mediatorForAction:actionName param:param target:targetName cache:cache];
 }
 
-
+- (id _Nullable)notFoundAction:(id _Nullable)param {
+#if DEBUG
+    NSLog(@"%@",param);
+#endif
+    return nil;
+}
 
 @end

@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "SNMediatorProtocol.h"
-
 #import "NSObject+SNMediator.h"
+
+extern NSString * _Nullable const kSNMediatorMoudleName;
 
 __attribute__((objc_subclassing_restricted))
 

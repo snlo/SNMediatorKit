@@ -10,14 +10,16 @@
 
 @implementation Target_kTest
 
-- (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params {
+- (UIViewController *)Action_ativeTestViewController:(NSDictionary *)params {
 	UIViewController * vc = [[UIViewController alloc] init];
-	vc.view.backgroundColor = [UIColor redColor];
+	vc.view.backgroundColor = [UIColor yellowColor];
 	return vc;
 }
 
 - (void)Action_nativeTest:(NSDictionary *)param {
-    NSLog(@"bala bala bala!");
+    NSLog(@"action! action! action!");
 }
+
+
 
 @end

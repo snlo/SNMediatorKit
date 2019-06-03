@@ -69,7 +69,10 @@
     switch (indexPath.row) {
         case 0: {
             viewController =
-            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:nil target:@"kTest" cache:NO];
+//            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:@{@"key":@"value"} target:@"kTest" cache:NO];
+            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/ativeTestViewController"] completion:^(NSDictionary * _Nullable responseObject) {
+                NSLog(@" -- - end");
+            }];
         } break;
         case 1: {
             viewController =
@@ -82,6 +85,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 
 

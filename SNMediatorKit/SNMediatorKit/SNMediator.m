@@ -9,7 +9,9 @@
 #import "SNMediator.h"
 #import <objc/runtime.h>
 
-#import "SNMediatorTool.h"
+#import "Target_kSNMediator.h"
+
+NSString * const kSNMediatorMoudleName = @"kSNMediatorMoudleName";
 
 @interface SNMediator ()
 
@@ -60,7 +62,15 @@ static id instanse;
      safety logic
      */
     if ([actionMethodString hasPrefix:@"native"]) {
-        return @(NO);
+        return [self errorNotFound:url.host action:actionMethodString param:@{@"param":(parameters?:@"nil")} msg:@"It's not legal ！" code:@"400"];
+    }
+    
+    BOOL xxx = [[self safePerformAction:NSSelectorFromString(@"Avtion_nativeSafeMediatorUrl:") target:[[NSClassFromString(@"Target_kSNMediator") alloc] init] params:@{@"url":url}] boolValue];
+    
+    if (xxx) {
+        
+    } else {
+        return [self errorNotFound:url.host action:actionMethodString param:@{@"param":(parameters?:@"nil")} msg:@"Failure to pass security monitoring ！" code:@"400"];
     }
     
     /*
@@ -85,26 +95,28 @@ static id instanse;
     Class targetClass;
     
     NSObject * target = SNMediator.shared.cachedTarget[targetClassString];
+    
     if (target == nil) {
         targetClass = NSClassFromString(targetClassString);
         target = [[targetClass alloc] init];
     }
+    
     if (target == nil) {
         NSString * swiftModuleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
-        
+        if (param[kSNMediatorMoudleName]) {
+            swiftModuleName = param[kSNMediatorMoudleName];
+        }
         targetClassString = [NSString stringWithFormat:@"%@.Target_%@", swiftModuleName, targetName];
         
         targetClass = NSClassFromString(targetClassString);
         target = [[targetClass alloc] init];
     }
-    if (target == nil) {
-        /*
-         exception handling
-         */
-        return nil;
-    }
     
     SEL action = NSSelectorFromString(actionMethodString);
+    
+    if (target == nil) {
+        return [self errorNotFound:targetClassString action:actionMethodString param:@{@"param":(param?:@"nil")} msg:@"not found target" code:@"404"];
+    }
     
     if (cache) {
         SNMediator.shared.cachedTarget[targetClassString] = target;
@@ -112,33 +124,11 @@ static id instanse;
     
     if ([target respondsToSelector:action]) {
         return [self safePerformAction:action target:target params:param];
+        
     } else {
-        /*
-         compatible with swift
-         */
-        actionMethodString = [NSString stringWithFormat:@"Action_%@WithParams:", actionName];
-        action = NSSelectorFromString(actionMethodString);
-        if ([target respondsToSelector:action]) {
-            return [self safePerformAction:action target:target params:param];
-        } else {
-            SEL action = NSSelectorFromString(@"notFound:");
-            if ([target respondsToSelector:action]) {
-                return [self safePerformAction:action target:target params:param];
-            } else {
-                /*
-                 exception handling
-                 */
-                [self.cachedTarget removeObjectForKey:targetClassString];
-                return [SNMediator mediatErrorViewController];
-                return nil;
-            }
-        }
+        [self.cachedTarget removeObjectForKey:targetClassString];
+        return [self errorNotFound:targetClassString action:actionMethodString param:@{@"param":(param?:@"nil")} msg:@"not found action" code:@"404"];
     }
-}
-
-- (void)releaseCachedTarget:(NSString *)name {
-    NSString * targetClassString = [NSString stringWithFormat:@"Target_%@", name];
-    [self.cachedTarget removeObjectForKey:targetClassString];
 }
 
 #pragma mark - private methods
@@ -203,30 +193,23 @@ static id instanse;
 #pragma clang diagnostic pop
 }
 
-+ (UIViewController *)mediatErrorViewController {
-    __block UIViewController * errorViewController = [[UIViewController alloc] init];
-    errorViewController.view.backgroundColor = [UIColor redColor];
-//    [SNTool showAlertStyle:UIAlertControllerStyleAlert title:@"提示" msg:@"相关功能敬请期待，感谢您的支持" chooseBlock:^(NSInteger actionIndx) {
-//        [errorViewController dismissViewControllerAnimated:YES completion:^{
-//
-//        }];
-//    } actionsStatement:@"确认", nil];
+- (void)releaseCachedTarget:(NSString *)name {
+    NSString * targetClassString = [NSString stringWithFormat:@"Target_%@", name];
+    [self.cachedTarget removeObjectForKey:targetClassString];
+}
+
+- (id)errorNotFound:(NSString *)targetString action:(NSString *)actionString param:(NSDictionary *)param msg:(NSString *)msg code:(NSString *)code {
     
-    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"hsdsfsdf" preferredStyle:UIAlertControllerStyleActionSheet];
+    NSObject * target = [[NSClassFromString(@"Target_kSNMediator") alloc] init];
+    SEL action = NSSelectorFromString(@"Action_nativeNotFound:");
     
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertController animated:YES completion:^{
-        
-    }];
+    NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
     
-    UIAlertAction * cancelAction = [UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [alertController dismissViewControllerAnimated:YES completion:^{
-            
-        }];
-    }];
-    [alertController addAction:cancelAction];
+    [params setValue:code forKey:@"code"];
+    [params setValue:msg forKey:@"msg"];
+    [params setValue:@{@"target":targetString, @"action":actionString, @"param":(param?:@"nil")} forKey:@"data"];
     
-    
-    return errorViewController;
+    return [self safePerformAction:action target:target params:params];
 }
 
 #pragma mark - getters and setters

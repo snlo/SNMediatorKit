@@ -70,10 +70,10 @@ class SwiftViewController: UIViewController ,UITableViewDelegate, UITableViewDat
             sn_mediator(forAction: "nativeTest", param: nil, target: "kTest", cache: false)
             break
         case 3:
-            viewController = sn_mediator(forAction: "", param: nil, target: "kTestSwift", cache: false) as? UIViewController
+            viewController = sn_mediator(forAction: "xxx", param: nil, target: "kTestSwift", cache: false) as? UIViewController
             break
         case 4:
-            viewController = sn_mediator(forAction: "nativeFetchSwiftViewController", param: nil, target: "", cache: false) as? UIViewController
+            viewController = sn_mediator(forAction: "nativeFetchSwiftViewController", param: nil, target: "ccc", cache: false) as? UIViewController
             break
         default:
             break
