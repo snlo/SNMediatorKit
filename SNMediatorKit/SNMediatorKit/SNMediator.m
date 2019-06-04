@@ -9,13 +9,14 @@
 #import "SNMediator.h"
 #import <objc/runtime.h>
 
-#import "Target_kSNMediator.h"
-
 NSString * const kSNMediatorMoudleName = @"kSNMediatorMoudleName";
+NSString * const kSNMediatorSafeUrl = @"safeLogicUrl:";
+NSString * const kSNMediatorNotFound = @"notFound:";
+NSString * const kSNMediatorConfig = @"SNMediatorConfig";
 
 @interface SNMediator ()
 
-@property (nonatomic, strong) NSMutableDictionary *cachedTarget;
+@property (nonatomic, strong) NSMutableDictionary * cachedTarget;
 
 @end
 
@@ -62,15 +63,11 @@ static id instanse;
      safety logic
      */
     if ([actionMethodString hasPrefix:@"native"]) {
-        return [self errorNotFound:url.host action:actionMethodString param:@{@"param":(parameters?:@"nil")} msg:@"It's not legal ！" code:@"400"];
+        return [self errorNotFound:url.host action:actionMethodString param:parameters msg:@"It's not legal ！" code:@"400"];
     }
-    
-    BOOL xxx = [[self safePerformAction:NSSelectorFromString(@"Avtion_nativeSafeMediatorUrl:") target:[[NSClassFromString(@"Target_kSNMediator") alloc] init] params:@{@"url":url}] boolValue];
-    
-    if (xxx) {
+    if (![[self safePerformAction:NSSelectorFromString(kSNMediatorSafeUrl) target:[self getSubclassesFrom:[[NSClassFromString(kSNMediatorConfig) alloc] init]] params:@{@"url":url}] boolValue]) {
         
-    } else {
-        return [self errorNotFound:url.host action:actionMethodString param:@{@"param":(parameters?:@"nil")} msg:@"Failure to pass security monitoring ！" code:@"400"];
+        return [self errorNotFound:url.host action:actionMethodString param:parameters msg:@"Failure to pass security monitoring ！" code:@"400"];
     }
     
     /*
@@ -115,7 +112,7 @@ static id instanse;
     SEL action = NSSelectorFromString(actionMethodString);
     
     if (target == nil) {
-        return [self errorNotFound:targetClassString action:actionMethodString param:@{@"param":(param?:@"nil")} msg:@"not found target" code:@"404"];
+        return [self errorNotFound:targetClassString action:actionMethodString param:param msg:@"not found target" code:@"404"];
     }
     
     if (cache) {
@@ -127,7 +124,7 @@ static id instanse;
         
     } else {
         [self.cachedTarget removeObjectForKey:targetClassString];
-        return [self errorNotFound:targetClassString action:actionMethodString param:@{@"param":(param?:@"nil")} msg:@"not found action" code:@"404"];
+        return [self errorNotFound:targetClassString action:actionMethodString param:param msg:@"not found action" code:@"404"];
     }
 }
 
@@ -200,8 +197,8 @@ static id instanse;
 
 - (id)errorNotFound:(NSString *)targetString action:(NSString *)actionString param:(NSDictionary *)param msg:(NSString *)msg code:(NSString *)code {
     
-    NSObject * target = [[NSClassFromString(@"Target_kSNMediator") alloc] init];
-    SEL action = NSSelectorFromString(@"Action_nativeNotFound:");
+    NSObject * target = [[NSClassFromString(kSNMediatorConfig) alloc] init];
+    SEL action = NSSelectorFromString(kSNMediatorNotFound);
     
     NSMutableDictionary * params = [[NSMutableDictionary alloc] init];
     
@@ -209,7 +206,26 @@ static id instanse;
     [params setValue:msg forKey:@"msg"];
     [params setValue:@{@"target":targetString, @"action":actionString, @"param":(param?:@"nil")} forKey:@"data"];
     
+    target = [self getSubclassesFrom:target];
+    
     return [self safePerformAction:action target:target params:params];
+}
+
+- (NSObject *)getSubclassesFrom:(NSObject *)object {
+    if (self.config) {
+        return (NSObject *)self.config;
+    }
+    self.config = (SNMediatorConfig *)object;
+    unsigned int outCount;
+    Class * classes = objc_copyClassList(&outCount);
+    for (int i = 0; i < outCount; i++) {
+        if (class_getSuperclass(classes[i]) == [object class]){
+            self.config = (SNMediatorConfig *)[[NSClassFromString(NSStringFromClass(classes[i])) alloc] init];
+            break;
+        }
+    }
+    free(classes);
+    return (NSObject *)self.config;
 }
 
 #pragma mark - getters and setters

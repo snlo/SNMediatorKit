@@ -27,6 +27,8 @@
     self.tableView.dataSource = self;
     self.tableView.separatorInset = UIEdgeInsetsMake(0, 14, 0, 0); //设置分割线缩颈
     self.tableView.separatorColor = [UIColor grayColor];
+    
+    
 }
 
 #pragma mark -- <UITableViewDelegate, UITableViewDataSource>
@@ -54,6 +56,18 @@
         case 1: {
             cell.textLabel.text = @"Swift_mediator";
         } break;
+        case 2: {
+            cell.textLabel.text = @"模拟远程调度";
+        } break;
+        case 3: {
+            cell.textLabel.text = @"模拟偷渡者远程调度";
+        } break;
+        case 4: {
+            cell.textLabel.text = @"更换配置文件为‘SNMediatorconfig_01’";
+        } break;
+        case 5: {
+            cell.textLabel.text = @"更换配置文件为‘SNMediatorconfig_02’";
+        } break;
         default: break;
     }
     return cell;
@@ -69,19 +83,38 @@
     switch (indexPath.row) {
         case 0: {
             viewController =
-//            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:@{@"key":@"value"} target:@"kTest" cache:NO];
-            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/ativeTestViewController"] completion:^(NSDictionary * _Nullable responseObject) {
-                NSLog(@" -- - end");
-            }];
+            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:@{@"key":@"value"} target:@"kTest" cache:NO];
         } break;
         case 1: {
             viewController =
             [SNMediator sn_mediatorForAction:@"nativeFetchSwiftViewController" param:nil target:@"kTestSwift" cache:NO];
         } break;
+        case 2: {
+            viewController =
+            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/balabala?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
+                NSLog(@"response - - :%@",responseObject);
+            }];
+        } break;
+        case 3: {
+            viewController =
+            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/nativeTestViewController?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
+                NSLog(@"response - - :%@",responseObject);
+            }];
+        } break;
+        case 4: {
+            viewController = nil;
+            SNMediator.shared.config = [[SNMediatorconfig_01 alloc] init];
+        } break;
+        case 5: {
+            viewController = nil;
+            SNMediator.shared.config = [[SNMediatorconfig_02 alloc] init];
+        } break;
         default: break;
     }
-
-    [self.navigationController pushViewController:viewController animated:YES];
+    
+    if (viewController) {
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

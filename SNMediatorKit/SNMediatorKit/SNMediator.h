@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#import "NSObject+SNMediator.h"
+@class SNMediatorConfig;
 
-extern NSString * _Nullable const kSNMediatorMoudleName;
+extern NSString * _Nullable const kSNMediatorMoudleName; //它是在'param'中指定swift模块名的‘key’
 
 __attribute__((objc_subclassing_restricted))
 
@@ -23,6 +23,11 @@ __attribute__((objc_runtime_name("snloOXZjGfNl6qhP09")))
  只读的缓存池
  */
 @property (nonatomic, readonly) NSMutableDictionary * _Nullable cachedTarget;
+
+/**
+ 配置文件，有指定某个配置文件子类起作用。建议手动指定配置文件子类。
+ */
+@property (nonatomic, strong) SNMediatorConfig * _Nullable config;
 
 /**
  构造函数

@@ -32,13 +32,4 @@
 - (id _Nullable)sn_mediatorForAction:(nonnull NSString *)actionName param:(nullable NSDictionary *)param target:(nonnull NSString *)targetName cache:(BOOL)cache;
 
 
-/**
- 未找到相关‘Action’,用于子类继承
-
- @param param 包含该‘Action’相关信息
- @return 自定义
- */
-- (id _Nullable)notFoundAction:(id _Nullable)param;
-
-
 @end

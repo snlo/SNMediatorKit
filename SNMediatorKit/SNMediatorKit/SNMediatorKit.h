@@ -10,5 +10,7 @@
 #define SNMediatorKit_h
 
 #import "SNMediator.h"
+#import "SNMediatorConfig.h"
+#import "NSObject+SNMediator.h"
 
 #endif /* SNMediatorKit_h */

@@ -10,8 +10,10 @@
 
 @interface Target_kTest : NSObject
 
-- (UIViewController *)Action_ativeTestViewController:(NSDictionary *)params;
+- (UIViewController *)Action_nativeTestViewController:(NSDictionary *)params;
 
 - (void)Action_nativeTest:(NSDictionary *)param;
+
+- (UIViewController *)Action_balabala:(NSDictionary *)param;
 
 @end

@@ -21,6 +21,7 @@ class SwiftViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +49,12 @@ class SwiftViewController: UIViewController ,UITableViewDelegate, UITableViewDat
             break
         case 4: cell?.textLabel?.text = "Target does not exist"
             break
+        case 5 : cell?.textLabel?.text = "URL";
+            break
+        case 6: cell?.textLabel?.text = "Config 01"
+            break
+        case 7: cell?.textLabel?.text = "Config 02"
+            break
         default:
             break
         }
@@ -74,6 +81,17 @@ class SwiftViewController: UIViewController ,UITableViewDelegate, UITableViewDat
             break
         case 4:
             viewController = sn_mediator(forAction: "nativeFetchSwiftViewController", param: nil, target: "ccc", cache: false) as? UIViewController
+            break
+        case 5:
+            viewController = sn_mediator(for: URL(string: "http://kTest/balabala?tag=23&flag=qq")!, completion: { (response: [AnyHashable : Any]?) in
+                print("response:\(response!)")
+            }) as? UIViewController
+            break
+        case 6:
+            SNMediator.shared().config = SNMediatorconfig_01.init()
+            break
+        case 7:
+            SNMediator.shared().config = SNMediatorconfig_02.init()
             break
         default:
             break
