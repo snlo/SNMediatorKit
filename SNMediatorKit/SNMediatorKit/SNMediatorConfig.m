@@ -7,6 +7,7 @@
 //
 
 #import "SNMediatorConfig.h"
+#import <objc/runtime.h>
 
 static NSString * kSNMediatorConfigErrorController = @"kSNMediatorConfigErrorController";
 
