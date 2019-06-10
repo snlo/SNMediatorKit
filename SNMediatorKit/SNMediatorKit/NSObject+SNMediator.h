@@ -18,18 +18,18 @@
  @param completion 执行回调
  @return 任意对象，可为空值
  */
-- (id _Nullable)sn_mediatorForUrl:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion;
+- (id _Nullable)sn_mediator:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion;
 
 /**
  本机调度
  
- @param actionName 执行目标函数名
+ @param action 执行目标函数名
  @param param 参数
- @param targetName 执行目标名
+ @param target 执行目标名
  @param cache 是否缓存执行目标
  @return 任意对象，可为空值
  */
-- (id _Nullable)sn_mediatorForAction:(nonnull NSString *)actionName param:(nullable NSDictionary *)param target:(nonnull NSString *)targetName cache:(BOOL)cache;
+- (id _Nullable)sn_mediator:(nonnull NSString *)action param:(nullable NSDictionary *)param target:(nonnull NSString *)target cache:(BOOL)cache;
 
 
 @end

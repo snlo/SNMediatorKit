@@ -83,21 +83,21 @@
     switch (indexPath.row) {
         case 0: {
             viewController =
-            [SNMediator sn_mediatorForAction:@"nativeTestViewController" param:@{@"key":@"value"} target:@"kTest" cache:NO];
+            [SNMediator sn_mediator:@"nativeTestViewController" param:@{@"key":@"value"} target:@"kTest" cache:NO];
         } break;
         case 1: {
             viewController =
-            [SNMediator sn_mediatorForAction:@"nativeFetchSwiftViewController" param:nil target:@"kTestSwift" cache:NO];
+            [SNMediator sn_mediator:@"nativeFetchSwiftViewController" param:nil target:@"kTestSwift" cache:NO];
         } break;
         case 2: {
             viewController =
-            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/balabala?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
+            [SNMediator sn_mediator:[NSURL URLWithString:@"http://kTest/balabala?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
                 NSLog(@"response - - :%@",responseObject);
             }];
         } break;
         case 3: {
             viewController =
-            [SNMediator sn_mediatorForUrl:[NSURL URLWithString:@"http://kTest/nativeTestViewController?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
+            [SNMediator sn_mediator:[NSURL URLWithString:@"http://kTest/nativeTestViewController?tag=23&flag=qq"] completion:^(NSDictionary * _Nullable responseObject) {
                 NSLog(@"response - - :%@",responseObject);
             }];
         } break;

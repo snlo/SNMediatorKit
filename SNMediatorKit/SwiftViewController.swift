@@ -68,24 +68,25 @@ class SwiftViewController: UIViewController ,UITableViewDelegate, UITableViewDat
         
         switch indexPath.row {
         case 0:
-            viewController = sn_mediator(forAction: "nativeTestViewController", param: nil, target: "kTest", cache: false) as? UIViewController
+            viewController = sn_mediator("nativeTestViewController", param: nil, target: "kTest", cache: false) as? UIViewController
             break
         case 1:
-            viewController = sn_mediator(forAction: "nativeFetchSwiftViewController", param: nil, target: "kTestSwift", cache: false) as? UIViewController
+            viewController = sn_mediator("nativeFetchSwiftViewController", param: nil, target: "kTestSwift", cache: false) as? UIViewController
             break
         case 2:
-            sn_mediator(forAction: "nativeTest", param: nil, target: "kTest", cache: false)
+            sn_mediator("nativeTest", param: nil, target: "kTest", cache: false)
             break
         case 3:
-            viewController = sn_mediator(forAction: "xxx", param: nil, target: "kTestSwift", cache: false) as? UIViewController
+            viewController = sn_mediator("xxx", param: nil, target: "kTestSwift", cache: false) as? UIViewController
             break
         case 4:
-            viewController = sn_mediator(forAction: "nativeFetchSwiftViewController", param: nil, target: "ccc", cache: false) as? UIViewController
+            viewController = sn_mediator("nativeFetchSwiftViewController", param: nil, target: "ccc", cache: false) as? UIViewController
             break
         case 5:
-            viewController = sn_mediator(for: URL(string: "http://kTest/balabala?tag=23&flag=qq")!, completion: { (response: [AnyHashable : Any]?) in
+            viewController = sn_mediator(URL(string: "http://kTest/balabala?tag=23&flag=qq")!, completion: { (response: [AnyHashable : Any]?) in
                 print("response:\(response!)")
             }) as? UIViewController
+            
             break
         case 6:
             SNMediator.shared().config = SNMediatorconfig_01.init()

@@ -46,7 +46,7 @@ static id instanse;
 
 #pragma mark -- public method
 
-- (id _Nullable)sn_mediatorForUrl:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion {
+- (id _Nullable)sn_mediator:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion {
     
     NSMutableDictionary * parameters = [[NSMutableDictionary alloc] init];
     NSString * urlString = [url query];
@@ -73,7 +73,7 @@ static id instanse;
     /*
      rational logic : target-action
      */
-    id responseObject = [self sn_mediatorForAction:actionMethodString param:parameters target:url.host cache:NO];
+    id responseObject = [self sn_mediator:actionMethodString param:parameters target:url.host cache:NO];
     
     if (completion) {
         if (responseObject) {
@@ -85,42 +85,42 @@ static id instanse;
     return responseObject;
 }
 
-- (id _Nullable)sn_mediatorForAction:(nonnull NSString *)actionName param:(nullable NSDictionary *)param target:(nonnull NSString *)targetName cache:(BOOL)cache {
+- (id _Nullable)sn_mediator:(nonnull NSString *)action param:(nullable NSDictionary *)param target:(nonnull NSString *)target cache:(BOOL)cache {
     
-    NSString * targetClassString = [NSString stringWithFormat:@"Target_%@", targetName];
-    NSString * actionMethodString = [NSString stringWithFormat:@"Action_%@:", actionName];
+    NSString * targetClassString = [NSString stringWithFormat:@"Target_%@", target];
+    NSString * actionMethodString = [NSString stringWithFormat:@"Action_%@:", action];
     Class targetClass;
     
-    NSObject * target = SNMediator.shared.cachedTarget[targetClassString];
+    NSObject * target_obj = SNMediator.shared.cachedTarget[targetClassString];
     
-    if (target == nil) {
+    if (target_obj == nil) {
         targetClass = NSClassFromString(targetClassString);
-        target = [[targetClass alloc] init];
+        target_obj = [[targetClass alloc] init];
     }
     
-    if (target == nil) {
+    if (target_obj == nil) {
         NSString * swiftModuleName = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString *)kCFBundleExecutableKey];
         if (param[kSNMediatorMoudleName]) {
             swiftModuleName = param[kSNMediatorMoudleName];
         }
-        targetClassString = [NSString stringWithFormat:@"%@.Target_%@", swiftModuleName, targetName];
+        targetClassString = [NSString stringWithFormat:@"%@.Target_%@", swiftModuleName, target];
         
         targetClass = NSClassFromString(targetClassString);
-        target = [[targetClass alloc] init];
+        target_obj = [[targetClass alloc] init];
     }
     
-    SEL action = NSSelectorFromString(actionMethodString);
+    SEL action_sel = NSSelectorFromString(actionMethodString);
     
-    if (target == nil) {
+    if (target_obj == nil) {
         return [self errorNotFound:targetClassString action:actionMethodString param:param msg:@"not found target" code:@"404"];
     }
     
     if (cache) {
-        SNMediator.shared.cachedTarget[targetClassString] = target;
+        SNMediator.shared.cachedTarget[targetClassString] = target_obj;
     }
     
-    if ([target respondsToSelector:action]) {
-        return [self safePerformAction:action target:target params:param];
+    if ([target_obj respondsToSelector:action_sel]) {
+        return [self safePerformAction:action_sel target:target_obj params:param];
         
     } else {
         [self.cachedTarget removeObjectForKey:targetClassString];

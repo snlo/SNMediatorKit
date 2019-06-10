@@ -12,13 +12,13 @@
 
 @implementation NSObject (SNMediator)
 
-- (id _Nullable)sn_mediatorForUrl:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion {
-    return [SNMediator.shared sn_mediatorForUrl:url completion:completion];
+- (id _Nullable)sn_mediator:(nonnull NSURL *)url completion:(void(^_Nullable)(NSDictionary * _Nullable responseObject))completion {
+    return [SNMediator.shared sn_mediator:url completion:completion];
 }
 
-- (id _Nullable)sn_mediatorForAction:(nonnull NSString *)actionName param:(nullable NSDictionary *)param target:(nonnull NSString *)targetName cache:(BOOL)cache {
+- (id _Nullable)sn_mediator:(nonnull NSString *)action param:(nullable NSDictionary *)param target:(nonnull NSString *)target cache:(BOOL)cache {
 
-    return [SNMediator.shared sn_mediatorForAction:actionName param:param target:targetName cache:cache];
+    return [SNMediator.shared sn_mediator:action param:param target:target cache:cache];
 }
 
 @end
